@@ -1,3 +1,5 @@
+//# todo: format this nicely and explain mostly everything
+
 cl_clockdrift_max_ms 0
 cl_interp 0
 cl_interp_npcs 0.0
@@ -27,7 +29,7 @@ sv_vote_creation_timer 0
 sv_allow_wait_command 0
 mp_feetmaxyawrate 2600
 mp_facefronttime 3000
-director_afk_timeout 120
+director_afk_timeout 60
 survivor_friendly_fire_factor_easy 0.1
 survivor_friendly_fire_factor_normal 0.2
 survivor_friendly_fire_factor_hard 0.2
@@ -36,8 +38,10 @@ survivor_burn_factor_easy 0.1
 survivor_burn_factor_normal 0.2
 survivor_burn_factor_hard 0.3
 survivor_burn_factor_expert 0.4
+//# was 1 before
 survivor_allow_crawling 0
 survivor_crawl_speed 40
+//# controls idle animations
 survivor_calm_damage_delay 4.0
 survivor_calm_deploy_delay 1.5
 survivor_calm_intensity 0.5
