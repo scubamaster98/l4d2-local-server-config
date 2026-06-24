@@ -1,38 +1,49 @@
 // todo: format this nicely and explain mostly everything
 
+// server stuff
+hostname "local hostname | test"
+sv_pure 0
+sv_pure_kick_clients 0
+sv_consistency 0
+sv_vote_command_delay 0
+sv_vote_creation_timer 0
+sv_allow_wait_command 1
+sv_pz_endgame_vote_period 15
+sv_pz_endgame_vote_post_period 15
+director_afk_timeout 60 // how long it takes for someone to become idle, default "45"
+vs_max_team_switches 9999 // infinite team switches in versus gamemodes
+decalfrequency 1 // spray cooldown, default "10"
+
 // hitreg stuff or smth idk
-cl_clockdrift_max_ms 0
-cl_interp 0
-cl_interp_npcs 0.0
-cl_interp_ratio 0.000001
+cl_clockdrift_max_ms 0 // u want this
+cl_interp 0 // 0 lerp
+cl_interp_npcs 0.0 // 0 lerp
+cl_interp_ratio 0.000001 // 0 interp ratio
 cl_smooth 1
-cl_smoothtime 0.03
-net_maxcleartime 0.0000000001
-sv_clockcorrection_msecs 0
-sv_client_min_interp_ratio 0 // min was -1 and max was 2 before, this should force 0 interp ratio
+cl_smoothtime 0.03 // cl_smooth 1 smooths over lag(?) dont really understand it but smooth time default is "0.1"
+net_maxcleartime 0.0000000001 // improves hit registration and reduces choke
+sv_clockcorrection_msecs 0 // 25 i think ive heard is better but idk
+sv_client_min_interp_ratio 0 // min was -1 and max was 2 before, this should force 0 interp ratio for everyone
 sv_client_max_interp_ratio 0
 sv_client_cmdrate_difference 0
-nb_update_frequency 0.03 // was 0.014, 0.024 and 0.0 before, changed to 0.03 for more performance
-nb_update_maxslide 0
-nb_update_framelimit 90
+nb_update_frequency 0.03 // was 0.014, 0.024 and 0.0 before, changed to 0.03 for more performance, default "0.1"
+nb_update_maxslide 0 // default "2"
+nb_update_framelimit 90 // default "30"
 nb_friction_forward 0
 nb_friction_sideways 10
-nb_yaw_rate 600 // nb_yaw_rate was 800 and 660
-z_max_neighbor_range 16
+nb_yaw_rate 600 // rotation speed of common infected and witches, was 800 and 660 before, default "300"(?)
+z_push_force 500 // not sure, all i know is that a mod lowers it to this as compensation for the frequency and stuff, default "2000"
+z_max_neighbor_range 16 // from real ci: max detection range between common infected, helps prevent them from pushing each other during hordes, bile events, or when surrounding incapped players, added because increased update rates broke vanilla clustering, so this value manually restores behavior close to default
 
 // lag comp or something
-melee_range 80
-chainsaw_attack_distance 70
-sv_maxunlag 0.4
-sv_unlag_fixstuck 1
-sv_client_predict 1
-
-// faster turnrate
-mp_feetmaxyawrate 2600
-mp_facefronttime 3000
+melee_range 80 // default 70
+chainsaw_attack_distance 70 // default 50(?)
+sv_maxunlag 0.4 // 40 ms max lag comp in seconds, default "1.0"
+sv_unlag_fixstuck 1 // disallow backtracking a player for lag compensation if it will cause them to become stuck, default "0" (WHY??)
+sv_client_predict 1 // forces cl_predict to 1 on clients, default "-1" (allows cl_predict 1 and 0)
 
 // gameplay changing or qol
-survivor_allow_crawling 0 // was 1 before
+survivor_allow_crawling 0 // enables crawling for survivors, default "0"
 survivor_crawl_speed 40
 survivor_friendly_fire_factor_easy 0.1
 survivor_friendly_fire_factor_normal 0.2
@@ -42,30 +53,19 @@ survivor_burn_factor_easy 0.1
 survivor_burn_factor_normal 0.2
 survivor_burn_factor_hard 0.3
 survivor_burn_factor_expert 0.4
-z_tank_rock_radius 30
-z_tank_footstep_shake_amplitude 2.4
-z_tank_footstep_shake_radius 750
-hud_deathnotice_threats 1
+mp_feetmaxyawrate 2600 // faster turnrate
+mp_facefronttime 3000 // faster turnrate
+z_tank_rock_radius 30 // fixes garbage tank rock "compensation" as i call it, default "100"
+z_tank_footstep_shake_amplitude 2.4 // less shake
+z_tank_footstep_shake_radius 750 // less shake
+hud_deathnotice_threats 1 // shows who killed tank at the left, default "0"
 
-// controls idle animations
-survivor_calm_damage_delay 4.0
+// misc
+z_head_damage_causes_wounds 0 // this is cosmetic(?), used to be 1
+z_holiday_gift_drop_chance 25 // controls gift spawn chances when its christmas
+music_dynamic_attack_CI_num 10 // controls when music starts depending on how many infected are attacking u
+survivor_calm_damage_delay 4.0 // controls idle animations (all of these)
 survivor_calm_deploy_delay 1.5
 survivor_calm_intensity 0.5
 survivor_calm_recent_enemy_delay 3.5
 survivor_calm_weapon_delay 2.25
-
-// server stuff
-sv_pure 0
-sv_pure_kick_clients 0
-sv_consistency 0
-sv_vote_command_delay 0
-sv_vote_creation_timer 0
-sv_allow_wait_command 1
-director_afk_timeout 60
-vs_max_team_switches 9999
-
-// misc
-z_push_force 500
-z_head_damage_causes_wounds 1
-z_holiday_gift_drop_chance 10
-music_dynamic_attack_CI_num 10
