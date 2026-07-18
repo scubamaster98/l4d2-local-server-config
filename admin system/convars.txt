@@ -1,0 +1,70 @@
+// this is my left 4 bots 2 config which contains primarily ai stuff
+
+allow_all_bot_survivor_team 1
+boomer_exposed_time_tolerance 0.05
+boomer_vomit_delay 0.05
+sb_all_bot_game 1
+sb_transition 0
+sb_allow_shoot_through_survivors 1
+sb_enforce_proximity_lookat_timeout 0
+sb_enforce_proximity_range 99999999
+sb_debug_apoproach_wait_time 0
+sb_far_hearing_range 10000
+sb_near_hearing_range 3500
+sb_locomotion_wait_threshold = 1
+sb_reachability_cache_lifetime = 1
+sb_follow_stress_factor 0
+sb_combat_saccade_speed 2000
+sb_normal_saccade_speed 1400
+sb_battlestation_human_hold_time 2
+sb_max_battlestation_range_from_human 225
+sb_battlestation_give_up_range_from_human 500
+sb_sidestep_for_horde 1
+sb_escort 0
+sb_allow_leading 0
+sb_max_team_melee_weapons 0
+sb_friend_immobilized_reaction_time_expert 0.22
+sb_friend_immobilized_reaction_time_hard 0.24
+sb_friend_immobilized_reaction_time_normal 0.26
+sb_friend_immobilized_reaction_time_vs 0.21
+sb_vomit_blind_time 0.05
+sb_close_threat_range 35
+sb_threat_close_range 1000
+sb_threat_very_close_range 750
+sb_threat_medium_range 2000
+sb_threat_far_range 2500
+sb_threat_very_far_range 3000
+sb_path_lookahead_range 1500
+sb_separation_danger_max_range 850
+sb_separation_danger_min_range 350
+sb_revive_friend_distance 170
+sb_separation_range 575
+sb_neighbor_range 270
+survivor_ff_avoidance 1
+smoker_escape_range 750
+smoker_tongue_delay 0.15
+tank_stasis_time_suicide 90
+z_female_boomer_spawn_chance 33
+z_max_stagger_duration 1.25
+z_jockey_leap_range 675
+z_jockey_leap_time 0.5
+z_jockey_lookahead 1600
+z_jockey_min_ledge_distance 0
+z_jockey_ride_hazard_scan_distance 1900
+z_jockey_ride_scan_distance 3000
+z_jockey_ride_scan_interval 1.50
+z_charge_warmup 0.22
+
+// game harder maybe
+sb_force_max_intensity Bill
+sb_force_max_intensity Coach
+sb_force_max_intensity Ellis
+sb_force_max_intensity Francis
+sb_force_max_intensity Louis
+sb_force_max_intensity Nick
+sb_force_max_intensity Rochelle
+sb_force_max_intensity Zoey
+
+// NextBots
+nb_saccade_speed 999999999
+nb_saccade_time 0
