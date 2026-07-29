@@ -1,10 +1,9 @@
-// this is my left 4 bots 2 config which contains primarily ai stuff
+// this is my left 4 bots 2 cvars config
 
+// survivor bot stuff
 allow_all_bot_survivor_team 1
-boomer_exposed_time_tolerance 0.05
-boomer_vomit_delay 0.05
+survivor_ff_avoidance 1
 sb_all_bot_game 1
-sb_transition 0
 sb_allow_shoot_through_survivors 1
 sb_enforce_proximity_lookat_timeout 0
 sb_enforce_proximity_range 99999999
@@ -40,22 +39,7 @@ sb_separation_danger_min_range 350
 sb_revive_friend_distance 170
 sb_separation_range 575
 sb_neighbor_range 270
-survivor_ff_avoidance 1
-smoker_escape_range 750
-smoker_tongue_delay 0.15
-tank_stasis_time_suicide 90
-z_female_boomer_spawn_chance 33
-z_max_stagger_duration 1.25
-z_jockey_leap_range 675
-z_jockey_leap_time 0.5
-z_jockey_lookahead 1600
-z_jockey_min_ledge_distance 0
-z_jockey_ride_hazard_scan_distance 1900
-z_jockey_ride_scan_distance 3000
-z_jockey_ride_scan_interval 1.50
-z_charge_warmup 0.22
-
-// game harder maybe
+sb_minigun_distance 60
 sb_force_max_intensity Bill
 sb_force_max_intensity Coach
 sb_force_max_intensity Ellis
@@ -65,6 +49,19 @@ sb_force_max_intensity Nick
 sb_force_max_intensity Rochelle
 sb_force_max_intensity Zoey
 
-// NextBots
+// infected stuff
 nb_saccade_speed 999999999
 nb_saccade_time 0
+smoker_escape_range 750
+smoker_tongue_delay 0.15
+tank_stasis_time_suicide 90
+boomer_exposed_time_tolerance 0.05
+boomer_vomit_delay 0.05
+z_jockey_leap_range 675
+z_jockey_leap_time 0.5
+z_jockey_lookahead 1600
+z_jockey_min_ledge_distance 0
+z_jockey_ride_hazard_scan_distance 1900
+z_jockey_ride_scan_distance 3000
+z_jockey_ride_scan_interval 1.50
+z_charge_warmup 0.22

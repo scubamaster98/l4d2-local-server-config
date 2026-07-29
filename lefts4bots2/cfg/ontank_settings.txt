@@ -1,0 +1,9 @@
+incap_block_nav_radius = 1200
+incap_block_nav_tank_range = 2500
+force_heal = 0
+spit_block_nav = 0
+manual_attack_mindot = 0.79
+manual_attack_radius = 800
+manual_attack_saccade_speed = 1200
+manual_attack_wandering = 1
+pickups_wep_ammo_replenish = 1
