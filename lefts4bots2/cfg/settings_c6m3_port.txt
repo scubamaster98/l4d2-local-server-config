@@ -1,0 +1,2 @@
+file_weapons_prefix = "left4bots2/cfg/weapons/c6m3_port/"
+scavenge_items_flow_distance = 0

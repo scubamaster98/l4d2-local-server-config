@@ -1,0 +1,1 @@
+handle_l4d1_survivors = 1
