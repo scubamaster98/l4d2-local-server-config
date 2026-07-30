@@ -1,4 +1,4 @@
-incap_block_nav_radius = 1200
+incap_block_nav_radius = 1000
 incap_block_nav_tank_range = 2500
 force_heal = 0
 spit_block_nav = 0

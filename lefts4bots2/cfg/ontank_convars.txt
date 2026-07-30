@@ -1,4 +1,6 @@
 sb_separation_range 3200
 sb_separation_danger_max_range 3300
 sb_separation_danger_min_range 2950
+sb_max_battlestation_range_from_human 3000
+sb_sidestep_for_horde 0
 sb_allow_leading 1

@@ -10,6 +10,8 @@ sv_vote_creation_timer 0 // how often someone can individually call a vote, migh
 sv_allow_wait_command 1 // allow or disallow the wait command on clients connected to this server, default "1"
 sv_pz_endgame_vote_period 15 // how long players get to vote to play again in versus, default "12"
 sv_pz_endgame_vote_post_period 10 // post period after end game vote ,default "5"
+sb_all_bot_game 1 // allow a server of nothing but bots, default "0"
+allow_all_bot_survivor_team 1 // allow a survivor team of nothing but bots. players are still required for the game to be active, default "0"
 director_afk_timeout 60 // how long it takes for someone to become idle, default "45"
 vs_max_team_switches 9999 // infinite team switches in versus gamemodes, default "1"
 decalfrequency 45 // spray cooldown, default "10"
