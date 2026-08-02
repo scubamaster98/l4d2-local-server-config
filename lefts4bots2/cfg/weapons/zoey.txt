@@ -1,4 +1,4 @@
-sniper_military,rifle_ak47,hunting_rifle,rifle,rifle_desert,rifle_sg552,shotgun_spas,autoshotgun,grenade_launcher,smg_silenced,smg,smg_mp5,shotgun_chrome,pumpshotgun
+sniper_military,rifle_ak47,hunting_rifle,rifle,rifle_desert,rifle_sg552,shotgun_spas,autoshotgun,smg_silenced,smg,smg_mp5,shotgun_chrome,pumpshotgun,grenade_launcher
 pistol_magnum,pistol
 vomitjar,molotov,pipe_bomb
 first_aid_kit,defibrillator,upgradepack_explosive,upgradepack_incendiary

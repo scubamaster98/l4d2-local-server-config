@@ -1,7 +1,5 @@
-// todo: format this nicely and explain mostly everything
-
 // server stuff
-hostname "local server | test"
+hostname "local server | test" // should in theory change the server's name but i dont think it works xd
 sv_pure 0
 sv_pure_kick_clients 0 // if set to 1, will kick clients with mismatching files. Otherwise, issue a warning to the client, default "1"
 sv_consistency 0 // default "1"
@@ -24,58 +22,66 @@ cl_interp_ratio 0.000001 // 0 interp ratio, default "2.0"
 cl_smooth 1 // default "1"
 cl_smoothtime 0.03 // cl_smooth 1 smooths over prediction errors depending on cl_smoothtime, default "0.1"
 net_maxcleartime 0.0000000001 // improves hit registration and reduces choke, default "4.0"
-sv_clockcorrection_msecs 20 // was 0, 25 i think ive heard is better but setting it below 15ms may cause stuttery or jittery movement, default "60"
+sv_clockcorrection_msecs 20 // was 0 before, 25 i think ive heard is better but setting it below 15ms may cause stuttery or jittery movement, default "60"
 sv_client_min_interp_ratio 0 // force 0 interp ratio for everyone
 sv_client_max_interp_ratio 0 // force 0 interp ratio for everyone
 sv_client_cmdrate_difference 0 // cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate, default "20"
 sv_unlag 1 // default "1"
-sv_maxunlag 0.35 // was 0.4 before, maximum amount of seconds to backtrack clients (Client latency + interpolation), default "1.0"
+sv_maxunlag 0.35 // maximum amount of seconds to backtrack clients (Client latency + interpolation), default "1.0"
 sv_unlag_fixstuck 1 // disallow backtracking a player for lag compensation if it will cause them to become stuck, default "0"
 sv_client_predict 1 // forces cl_predict 1 on clients, default "-1" (allows cl_predict 1 and 0)
 nb_update_frequency 0.03 // was 0.014/0.024/0.0 before, i recommend 0.066 or 0.08 if u have a lower end pc (assuming the commons dont stutter, which they shouldnt), default "0.1"
 nb_update_maxslide 1 // was 0 before, max number of ticks a NextBot may be deferred past its scheduled update before it's force updated, default "2"
 nb_update_framelimit 60 // was 100/90 before, ive seen this dropped to 5 in some configs, default "30"
-nb_friction_forward 0
-nb_friction_sideways 10
+nb_friction_forward 0 // friction when moving forwards, default "0"
+nb_friction_sideways 10 // friction when moving sideways, default "3"
 nb_yaw_rate 600 // was 800/660 before, rotation speed of common infected and witches, default "250"
 z_push_force 1000 // was 500 before, a mod i use lowers this as compensation for the frequency, default "2000"
 z_max_neighbor_range 16 //max detection range between common infected, helps prevent them from pushing each other during hordes, bile events, or when surrounding incapped players, added because increased update rates broke vanilla clustering, so this value manually restores behavior close to default, default "200"
 
 // improvements/qol
-mp_feetmaxyawrate 2600 // faster and more accurate turnrate, default "100"
-mp_facefronttime 3 // was 3000 before, after this amount of time of standing in place but aiming to one side, go and move feet to face upper body, default "2"
-mp_feetyawrate 360 // faster and more accurate turnrate test, default "180"
-mp_feetyawrate_max 720 // faster and more accurate turnrate test, default "360"
 z_tank_rock_radius 30 // reduces the sphere radius the survivors have for tank rocks, default "100"
 z_tank_footstep_shake_amplitude 2.4 // less shake, default "5"
 z_tank_footstep_shake_radius 750 // less shake, default "750"
 z_female_boomer_spawn_chance 33 // chance (0 - 100) if a female Boomer shouldn't be allowed to spawn. Setting to 100 means no female Boomers, default "25"
 z_max_stagger_duration 1.25 // max time a PZ staggers when bashed by a survivor, default "6"
-sb_transition 0 // bots are no longer used as placeholders for players who are still loading in, preventing the bots from changing weapons or other items, default "1"
+sb_transition 0 // if 0, bots are no longer used as placeholders for players who are still loading in, preventing the bots from changing weapons or other items, default "1"
 hud_deathnotice_threats 1 // shows who killed tank, default "0"
 melee_range 80 // should make it better for higher ping clients, if u play solo reduce it to 70 again ig, default "70"
-chainsaw_attack_distance 70 // useless melee anyway, default "50"
+chainsaw_attack_distance 70 // default "50"
+
+// thirdperson stuff
+survivor_calm_damage_delay 4.0 // survivors are not calm for this many seconds after taking damage, default "5"
+survivor_calm_deploy_delay 1.5 // survivors are not calm for this many seconds after switching weapons, default "2"
+survivor_calm_intensity 0.5 // survivors are not calm if their intensity level is above this point, default "0.25"
+survivor_calm_recent_enemy_delay 3.5 // survivors are not calm for this many seconds after seeing an enemy, default "5"
+survivor_calm_weapon_delay 2.25 // survivors are not calm for this many seconds after firing, default "5"
+mp_feetmaxyawrate 2600 // faster and more accurate turnrate, default "100"
+mp_facefronttime 3 // was 3000 before, after this amount of time of standing in place but aiming to one side, go and move feet to face upper body, default "2"
+mp_feetyawrate 400 // faster and more accurate turnrate, default "180"
+mp_feetyawrate_max 800 // faster and more accurate turnrate, default "360"
 
 // gameplay changing
 survivor_allow_crawling 0 // if 1, enables crawling for survivors, default "0"
 survivor_crawl_speed 40 // default "15"
+z_hit_chainsawer_factor 0.4 // dmg multiplier if zombie hits someone using a chainsaw, default "0.5"
 
 // friendly fire (i dont like the normal values)
+bullet_ff_through_walls 0 // if 1, allows u to wallbang ur teammates, default "0"
 survivor_friendly_fire_factor_easy 0.1 // default "0"
 survivor_friendly_fire_factor_normal 0.2 // default "0.1"
 survivor_friendly_fire_factor_hard 0.2 // default "0.3"
-survivor_friendly_fire_factor_expert 0.25 // was 0.2, default "0.5"
+survivor_friendly_fire_factor_expert 0.25 // default "0.5"
 survivor_burn_factor_easy 0.1 // default "0.2"
 survivor_burn_factor_normal 0.2 // default "0.2"
 survivor_burn_factor_hard 0.3 // default "0.4"
-survivor_burn_factor_expert 0.4 // default "1"
+survivor_burn_factor_expert 0.5 // default "1"
 
 // misc
 z_head_damage_causes_wounds 0 // head damage with any weapon can cause wounds, used in realism mode. this is cosmetic(?), default "0"
-z_holiday_gift_drop_chance 25 // controls gift spawn chances when its christmas, default "0.3"
+z_holiday_gift_drop_chance 0.2 // controls gift spawn chances when its christmas, default "0.3"
 music_dynamic_attack_CI_num 10 // controls when music starts depending on how many infected are attacking u, default "30"
-survivor_calm_damage_delay 4.0 // controls idle animations
-survivor_calm_deploy_delay 1.5 // controls idle animations
-survivor_calm_intensity 0.5 // controls idle animations
-survivor_calm_recent_enemy_delay 3.5 // controls idle animations
-survivor_calm_weapon_delay 2.25 // controls idle animations
+director_spectate_specials 1 // allow spectating zombies, default "0"
+spec_filter any // any|human|bot|survivor|infected, default "any"
+spec_filter_infected any // any|human|bot|survivor|infected, default "any"
+spec_filter_survivors any // any|human|bot|survivor|infected, default "survivors"

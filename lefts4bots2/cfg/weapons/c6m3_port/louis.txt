@@ -1,2 +1,5 @@
-shotgun_spas,autoshotgun,rifle_ak47,rifle_sg552,rifle_desert,rifle,sniper_military,hunting_rifle,sniper_scout,sniper_awp,rifle_m60,grenade_launcher,smg_mp5,smg_silenced,shotgun_chrome,smg,pumpshotgun
-pistol_magnum,pistol,chainsaw,machete,golfclub,katana,fireaxe,crowbar,cricket_bat,baseball_bat,tonfa,shovel,electric_guitar,knife,frying_pan,pitchfork,riotshield
+rifle_ak47,rifle,rifle_desert,shotgun_spas,autoshotgun,rifle_sg552,sniper_military,hunting_rifle,smg_silenced,smg,smg_mp5,shotgun_chrome,pumpshotgun,grenade_launcher
+pistol_magnum,pistol
+vomitjar,molotov,pipe_bomb
+first_aid_kit,defibrillator,upgradepack_explosive,upgradepack_incendiary
+pain_pills,adrenaline 
